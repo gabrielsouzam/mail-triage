@@ -14,8 +14,8 @@ COPY pyproject.toml .
 
 RUN uv pip install --system --no-cache-dir -r pyproject.toml
 
-COPY ./src .
+COPY . .
 
 EXPOSE 5000
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "5000"]
+CMD ["uvicorn", "src.app:app", "--host", "0.0.0.0", "--port", "5000"]

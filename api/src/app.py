@@ -2,8 +2,7 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routes import email
-from routes import root
+from src.routes import email, analytics, root
 
 ENV = os.getenv("ENVIRONMENT", "development")
 
@@ -31,6 +30,7 @@ app.add_middleware(
 )
 
 app.include_router(email.router)  
+app.include_router(analytics.router)
 app.include_router(root.router)  
 
 if __name__ == "__main__":

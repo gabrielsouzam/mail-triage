@@ -1,13 +1,13 @@
 from http import HTTPStatus
 import json
 import traceback
-from  config.settings import settings
-from  schemas.email import LLmEmailResponse
+from src.config.settings import settings
+from src.schemas.email import LLmEmailResponse
 from fastapi import HTTPException
 from google.genai import Client, types
-from  config.logs import logger
-from  utils.prompt_formatter import prompt_formatter_util
-from  utils.preprocess_text import preprocess_text_util
+from src.config.logs import logger
+from src.utils.prompt_formatter import prompt_formatter_util
+from src.utils.preprocess_text import preprocess_text_util
 
 
 class AIService:
