@@ -2,7 +2,7 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from src.routes import email, analytics, root
+from src.routes import email, analytics, root, auth
 
 ENV = os.getenv("ENVIRONMENT", "development")
 
@@ -32,8 +32,9 @@ app.add_middleware(
 app.include_router(email.router)  
 app.include_router(analytics.router)
 app.include_router(root.router)  
+app.include_router(auth.router)
 
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("app:app", host="0.0.0.0", port=5000)
+    uvicorn.run("app:app", host="0.0.0.0", port=8000)

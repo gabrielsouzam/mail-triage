@@ -13,7 +13,8 @@ def create_email_analysis(
   content: str,
   category: str,
   response: str,
-  processing_time_ms: float
+  processing_time_ms: float,
+  user_id: Optional[int] = None
 ) -> EmailAnalysis:
   content_hash = hashlib.sha256(content.encode()).hexdigest()
   
@@ -22,7 +23,8 @@ def create_email_analysis(
     content_hash=content_hash,
     category=category,
     suggested_response=response,
-    processing_time_ms=processing_time_ms
+    processing_time_ms=processing_time_ms,
+    user_id=user_id
   )
   
   session.add(analysis)
@@ -64,7 +66,8 @@ def get_recent_analyses(session: Session, limit: int = 10) -> list[dict]:
       "id": a.id,
       "preview": a.content_preview[:100] + "..." if len(a.content_preview) > 100 else a.content_preview,
       "category": a.category,
-      "created_at": a.created_at.isoformat()
+      "suggested_response": a.suggested_response,
+      "created_at": a.created_at.isoformat().replace('+00:00', 'Z') if a.created_at.tzinfo else a.created_at.isoformat() + 'Z'
     }
     for a in analyses
   ]

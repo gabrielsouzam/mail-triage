@@ -7,6 +7,7 @@ from sqlmodel import SQLModel
 from alembic import context
 
 from src.models.email_analysis import EmailAnalysis
+from src.models.user import User  # Adicionar modelo User
 import os
 from src.config.settings import settings
 
