@@ -42,7 +42,7 @@ class AIService:
       )
     
   def get_email_analysis(self, content: str) -> LLmEmailResponse:
-    logger.info(f"Getting email analysis")
+    logger.info("Getting email analysis")
     
     try:
       preprocessed_content = preprocess_text_util(content)

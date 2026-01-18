@@ -1,5 +1,9 @@
 from sqlmodel import SQLModel, Field, Relationship
 from datetime import datetime
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from src.models.email_analysis import EmailAnalysis
 
 class User(SQLModel, table=True):
   __tablename__ = "users"

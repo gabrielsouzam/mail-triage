@@ -1,6 +1,10 @@
 from sqlmodel import SQLModel, Field, Relationship
 from datetime import datetime, timezone
+from typing import TYPE_CHECKING
 from src.models.enums import email_category
+
+if TYPE_CHECKING:
+    from src.models.user import User
 
 class EmailAnalysis(SQLModel, table=True):
   __tablename__ = "email_analysis"
