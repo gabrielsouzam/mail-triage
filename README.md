@@ -9,12 +9,17 @@ Sistema inteligente de classificação de emails utilizando IA do Google Gemini.
 - Google Gemini AI
 - PostgreSQL + SQLModel
 - OAuth 2.0 (Google)
+- Alembic
+- SQLModel
+- JWT
 
 **Frontend:**
 - React + TypeScript
 - Vite
 - TailwindCSS
 - Axios
+- React Router DOM
+- React Hook Form + Zod
 
 ## Pré-requisitos
 
@@ -32,7 +37,7 @@ Sistema inteligente de classificação de emails utilizando IA do Google Gemini.
 cd api
 cp .env.example .env
 # Configure as variáveis no .env
-uv sync
+uv sync  --dev
 alembic upgrade head
 uvicorn src.app:app --reload
 ```
@@ -52,9 +57,15 @@ npm run dev
 - Autenticação OAuth 2.0 com Google
 - Classificação de emails (Produtivo/Improdutivo)
 - Sugestões de respostas com IA
-- Dashboard com analytics
+- Dashboard com informações
 - Histórico de análises
 - Interface responsiva
+
+## Links
+
+- **Web:** https://mail-triage-pi.vercel.app
+- **API:** https://mail-triage-e3hf.onrender.com
+- **Docs:** https://mail-triage-e3hf.onrender.com/docs
 
 ## Autor
 
