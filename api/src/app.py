@@ -16,7 +16,7 @@ app = FastAPI(
 
 if ENV == "production":
     allowed_origins = [
-    "https://email-analyst.vercel.app"
+        "https://mail-triage-pi.vercel.app",
     ]
 else:
     allowed_origins = ["*"]

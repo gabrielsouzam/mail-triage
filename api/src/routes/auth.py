@@ -1,3 +1,4 @@
+import os
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import JSONResponse
 from sqlmodel import Session
@@ -9,6 +10,8 @@ from src.utils.auth import get_current_user
 from src.models.user import User
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
+
+is_production = os.getenv("ENVIRONMENT") == "production"
 
 @router.post("/google")
 async def google_login(
@@ -33,12 +36,13 @@ async def google_login(
     }
   })
   
+  
   response.set_cookie(
     key="access_token",
     value=access_token,
     httponly=True,
-    secure=False,
-    samesite="lax",
+    secure=is_production,
+    samesite="none" if is_production else "lax",
     max_age=60 * 60 * 24 * 7 # 7 days
   )
   
