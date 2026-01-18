@@ -5,8 +5,8 @@ import {
   SparkleIcon,
 } from "@phosphor-icons/react";
 import { toast } from "sonner";
-import { Card } from "./ui/Card";
-import { Badge } from "./ui/Badge";
+import { Card } from "../ui/Card";
+import { Badge } from "../ui/Badge";
 
 interface EmailAnalysisProps {
   emailAnalysis: EmailAnalysisResponse;

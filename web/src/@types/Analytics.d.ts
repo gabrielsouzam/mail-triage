@@ -11,5 +11,6 @@ export interface RecentAnalysis {
   id: number;
   preview: string;
   category: 'productive' | 'unproductive';
+  suggested_response: string;
   created_at: string;
 }

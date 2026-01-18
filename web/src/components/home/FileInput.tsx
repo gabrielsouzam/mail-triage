@@ -1,6 +1,6 @@
 import { useState, useRef, type DragEvent, type ChangeEvent } from "react";
 import { FileArrowUpIcon, FileTextIcon } from "@phosphor-icons/react";
-import { formatFileSizeUtil } from "../utils/format-file-size-util";
+import { formatFileSizeUtil } from "../../utils/format-file-size-util";
 
 interface FileInputProps {
   selectedFile: File | undefined

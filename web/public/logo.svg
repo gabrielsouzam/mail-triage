@@ -1,0 +1,26 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="60" cy="60" r="60" fill="url(#gradient1)"/>
+  
+  <!-- Mail Envelope -->
+  <path d="M30 45C30 41.6863 32.6863 39 36 39H84C87.3137 39 90 41.6863 90 45V75C90 78.3137 87.3137 81 84 81H36C32.6863 81 30 78.3137 30 75V45Z" fill="white" fill-opacity="0.95"/>
+  
+  <!-- Envelope Flap -->
+  <path d="M30 45L60 65L90 45" stroke="#2c5f6f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- AI Sparkle 1 -->
+  <circle cx="72" cy="32" r="3" fill="#3b82f6"/>
+  <path d="M72 26L72 38M66 32L78 32" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- AI Sparkle 2 -->
+  <circle cx="88" cy="52" r="2.5" fill="#60a5fa"/>
+  <path d="M88 47L88 57M83 52L93 52" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient1" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2c5f6f"/>
+      <stop offset="100%" stop-color="#3a7a8c"/>
+    </linearGradient>
+  </defs>
+</svg>
