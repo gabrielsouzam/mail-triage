@@ -3,21 +3,6 @@ import unicodedata
 
 
 def preprocess_text_util(text: str) -> str:
-    """
-    Preprocesses email text using NLP techniques before sending to LLM.
-    
-    Techniques applied:
-    - Text normalization (Unicode normalization)
-    - Whitespace normalization (remove extra spaces, tabs, newlines)
-    - Punctuation normalization
-    - Case preservation (important for proper nouns and acronyms)
-    
-    Args:
-        text (str): Raw email text
-        
-    Returns:
-        str: Preprocessed text ready for analysis
-    """
     # 1. Unicode normalization (NFC - Canonical Decomposition followed by Canonical Composition)
     # This ensures consistent representation of accented characters (important for Portuguese)
     text = unicodedata.normalize('NFC', text)

@@ -35,11 +35,27 @@ Sistema inteligente de classificação de emails utilizando IA do Google Gemini.
 
 ```bash
 cd api
+
+# 1. Iniciar o banco de dados PostgreSQL com Docker Compose
+docker-compose up -d
+
+# 2. Configurar variáveis de ambiente
 cp .env.example .env
 # Configure as variáveis no .env
-uv sync  --dev
+
+# 3. Instalar dependências
+uv sync --dev
+
+# 4. Executar migrations
 alembic upgrade head
+
+# 5. Iniciar a API
 uvicorn src.app:app --reload
+```
+
+**Parar o banco de dados:**
+```bash
+docker-compose down
 ```
 
 ### Frontend (Web)
