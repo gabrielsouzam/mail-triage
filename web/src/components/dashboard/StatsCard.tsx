@@ -16,7 +16,7 @@ export function StatsCard({ title, value, icon, subtitle }: StatsCardProps) {
             <p className="text-sm text-gray-500 mt-1">{subtitle}</p>
           )}
         </div>
-        <div className="p-3 bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] rounded-lg text-white">
+        <div className="p-3 bg-gradient-to-br from-[#2c5f6f] to-[#3a7a8c] rounded-lg text-white">
           {icon}
         </div>
       </div>
